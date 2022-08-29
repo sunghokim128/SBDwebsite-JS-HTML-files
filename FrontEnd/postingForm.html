@@ -1,0 +1,33 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+<div class="container">
+
+  <form action="/posting/new" method="post"  onsubmit="return alertMessage();">
+    <!-- 어떻게 여러개의 함수를 onsubmit에 포함할지 알아내기-->
+
+    <div class="form-group">
+      <label for="squat">스쿼트</label>
+      <input type="text" id="squat" name="squat" placeholder="스쿼트 최대 중량(kg):"><br>
+      <label for="benchpress">벤치프레스</label>
+      <input type="text" id="benchpress" name="squat" placeholder="benchpress 최대 중량(kg):"><br>
+      <label for="deadlift">데드리프트</label>
+      <input type="text" id="deadlift" name="deadlift" placeholder="데드리프트 최대 중량(kg):"><br>
+      <label for="weight">몸무게</label>
+      <input type="text" id="weight" name="weight" placeholder="몸무게(kg):"><br>
+      <label for="true">남성</label>
+      <input type="radio" id="true" name="gender" value="true" required>
+      <label for="false">여성</label>
+      <input type="radio" id="false" name="gender" value="false" required><br>
+    </div>
+
+    <div>제목: <input type="text" id="title" name = "title"/><br><br>
+      본문: <textarea id="body" name = "body" rows="10" cols="100">여기에 본문을 작성해주세요</textarea>
+    </div>
+
+    <button type="submit" onclick="return BSChecker();">게시하기</button>
+    <script src="postingAlert.js"></script>
+
+  </form>
+</div> <!-- /container -->
+</body>
+</html>
