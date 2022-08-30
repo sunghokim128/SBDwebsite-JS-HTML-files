@@ -4,10 +4,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>게시글 자세히보기</title>
+    <title th:text="${posting.title}">게시글 자세히보기</title>
+
+    <!-- 홈 화면으로 돌아가는 바로가기 기능 -->
+    <a style="text-align:center;" href="home.html"> <h1>[3대몇]</h1> </a>
+    <br>
+
 </head>
 <body>
-    <h3><td th:text="${posting.title}">제목이 여기 드갑니다</td></h3>
+    <h3>제목: <td th:text="${posting.title}">제목이 여기 드갑니다</td> 랭킹: <td th:text="${posting.title}">랭킹이 여기에 들어갑니다</td> </h3>
+
+    <td th:text="${posting.body}">본문이 여기 드갑니다</td>
+
     <br>
     <td th:text="${posting.body}">본문이 여기 드갑니다</td>
 </body>

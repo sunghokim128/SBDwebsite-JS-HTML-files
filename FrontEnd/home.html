@@ -27,9 +27,9 @@
     </thead>
     <tbody>
     <tr th:each="posting : ${postings}">
-        <td><a href="postingView.html" th:href="@{/posting/id/{id}(id=${posting.id})}" th:text="${posting.id}">게시글 아이디</a></td>
 
-        <td th:text="${posting.title}">제목</td>
+       <td><a href="postingView.html" th:href="@{/posting/id/{id}(id=${posting.id})}" th:text="${posting.id}">게시글 아이디</a></td>
+        <td><a href="postingView.html" th:href="@{/posting/id/{id}(id=${posting.id})}" th:text="${posting.title}">게시글 제목</a></td>
 
     </tr>
     </tbody>
