@@ -12,10 +12,9 @@
 
 </head>
 <body>
-    <h3>제목: <td th:text="${posting.title}">제목이 여기 드갑니다</td> 랭킹: <td th:text="${posting.rank}">랭킹이 여기에 들어갑니다</td> </h3>
-
-    <td th:text="${posting.body}">본문이 여기 드갑니다</td>
-
+    <h3>제목: <td th:text="${posting.title}">제목이 여기 들어갑니다</td>&nbsp
+        <!-- 오른쪽으로 정렬을 해야하는데 잘 안되네요. 하지만 랭킹 부분이 왼쪽에 붙어있어도 괜찮습니다. 편하신대로 해주세요-->
+        랭킹: <td th:text="${posting.rank}" >제목이 여기 들어갑니다</td><td/> </h3>
     <br>
     <td th:text="${posting.body}">본문이 여기 드갑니다</td>
 </body>

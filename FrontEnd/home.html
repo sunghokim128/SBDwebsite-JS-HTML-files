@@ -19,17 +19,24 @@
 <table class="table">
     <thead>
     <tr>
-        <th>ID</th>
-
-        <th>제목</th>
+        <th>글ID</th>
+        <th>title</th>
+        <th>1RM</th>
+        <th>Weight</th>
+        <th>Gender</th>
+        <!-- 이 부분은 아직 안됐습니다-->
+        <th>Writer</th>
 
     </tr>
     </thead>
     <tbody>
     <tr th:each="posting : ${postings}">
 
-       <td><a href="postingView.html" th:href="@{/posting/id/{id}(id=${posting.id})}" th:text="${posting.id}">게시글 아이디</a></td>
+       <td><a th:text="${posting.id}">게시글 아이디</a></td>
         <td><a href="postingView.html" th:href="@{/posting/id/{id}(id=${posting.id})}" th:text="${posting.title}">게시글 제목</a></td>
+        <td><a th:text="${posting.rank}">글쓴이 랭킹</a></td>
+        <td><a th:text="${posting.weight}">글쓴이 몸무게</a></td>
+        <td><a th:text="${posting.gender}">글쓴이 성별<a/></td>
 
     </tr>
     </tbody>
